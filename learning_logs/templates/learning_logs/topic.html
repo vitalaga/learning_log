@@ -2,6 +2,9 @@
 
 {% block page_header %}
   <h3>{{ topic }}</h3>
+  {% if topic.public == True %}
+    <a>This is public topic by {{ topic.owner }}</a>
+  {% endif %}
 {% endblock page_header %}
 
 {% block content %}
